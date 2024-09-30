@@ -1,0 +1,432 @@
+@font-face {
+  font-family: BebasNeue;
+  src: url(./fonts/BebasNeue-Regular.ttf);
+}
+
+@font-face {
+  font-family: Lato;
+  src: url(./fonts/Lato-Regular.ttf);
+}
+
+:root {
+  --black: #3D3D3D;
+  --dark-grey: #666666;
+  --blue: #007A82;
+  --yellow: #FEBB0C;
+  --grey: #EDEDED;
+  --white: #FFFFFF;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.hamburger, .accountOptions{
+  color: var(--blue);
+  font-size: 20px;
+  text-decoration: none;
+  display: none;
+}
+.close{
+  display: none;
+}
+.accountOptions {
+  border: 2px solid var(--blue);
+  border-radius: 50%;
+}
+div.container{
+  width: 1200px;
+  margin: auto;
+
+}
+
+#topNav{
+  height: 70px;
+  background-color: var(--grey);
+}
+.content{
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navlinks{
+  width: 40%;
+  display: flex;
+}
+.logo{
+  margin: auto;
+}
+.logo img{
+  width: 100%;
+  height: auto;
+}
+.accountButton{
+  width: 40%;
+}
+.accountButton a{
+  float: right;
+  padding: 12px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-family: Lato;
+}
+a.accountOptions{
+  padding: 5px 9px;
+}
+.signin{
+  color: var(--dark-grey);
+  margin-right: 12px;
+}
+.signup{
+  color: var(--white);
+  background-color: var(--blue);
+  margin-right: 12px;
+}
+.links {
+  list-style: none;
+}
+.links a{
+  color: var(--dark-grey);
+  text-decoration: none;
+  padding: 20px;
+  font-family: Lato;
+}
+a.active {
+  color: var(--yellow);
+}
+
+#banner{
+  background-color: var(--grey);
+}
+
+.bannerContent{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.bannerTexts{
+  width: 40%;
+  position: relative;
+  top: -60px;
+}
+
+.bannerImage{
+  width: 47%;
+  height: 100%;
+}
+
+.bannerImage img{
+  /* float: right; */
+  width: 100%;
+  height: auto;
+}
+
+.businessConstant{
+  color: var(--blue);
+  position: relative;
+  left: 60px;
+  font-size: 16px;
+  font-weight: 400;
+}
+.yellowLine{
+  height: 4px;
+  width: 50px;
+  position: relative;
+  top: 11px;
+  background-color: var(--yellow);
+}
+.bannerHeading {
+  color: var(--black);
+  font-size: 70px;
+  font-weight: 400;
+  letter-spacing: 0.6px;
+  margin: 10px 0;
+  font-family: BebasNeue;
+}
+
+.bannerDescription {
+  color: var(--dark-grey);
+  font-size: 15px;
+  line-height: 20px;
+  font-family: Lato;
+}
+
+.getStartedButton{
+  border-radius: 30px;
+  padding: 15px 25px;
+  text-decoration: none;
+  position: relative;
+  top: 40px;
+  font-family: Lato;
+}
+.bannerBulletpoints{
+  position: relative;
+  top: 80px;
+}
+.bannerBulletpoints ul{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+.bannerBulletpoints ul li{
+  list-style: disc;
+  color: var(--dark-grey);
+  padding: 0px 30px;
+  font-family: Lato;
+}
+.bannerBulletpoints ul li:nth-child(1), .bannerBulletpoints ul li:nth-child(4){
+  list-style: none;
+  position: relative;
+  top: 5px;
+}
+::marker{
+  color: var(--yellow);
+  font-size: 20px;
+}
+
+div.featuresContent{
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+  bottom: 50px;
+}
+div.featureBox{
+  width: 23%;
+  padding: 20px;
+  background-color: var(--white);
+  transition: 0.3s;
+}
+div.featureBox h3{
+  font-size: 40px;
+  font-weight: 400;
+  font-family: BebasNeue;
+  color: var(--blue);
+}
+div.featureBox p{
+  color: var(--dark-grey);
+  margin: 15px 0;
+  font-family: Lato;
+}
+div.featureBox:hover{
+  background-color: var(--blue);
+}
+div.featureBox:hover h3 {
+  color: var(--yellow);
+}
+div.featureBox:hover p {
+  color: var(--white);
+}
+.featureLine{
+  width: 100%;
+  height: 4px;
+  background-color: var(--yellow);
+}
+.closeButton {
+  display: none;
+}
+
+@media screen and (max-width:1200px) {
+  .container{
+    width: 900px !important;
+  }
+  #banner{
+    padding-bottom: 150px;
+  }
+  .bannerTexts{
+    top: 30px;
+    left: 30px;
+  }
+  .bannerHeading{
+    font-size: 50px;
+  }
+
+  .bannerBulletpoints ul li {
+    list-style: disc;
+    position: relative;
+    top: 5px;
+    left: 30px;
+  }
+  .bannerBulletpoints ul li:nth-child(1),
+  .bannerBulletpoints ul li:nth-child(4) {
+    list-style: disc;
+    position: relative;
+    top: 5px;
+  }
+  div.featuresContent{
+    width: 100%;
+  }
+
+  .featuresBox{
+    width: 100% !important;
+  }
+}
+@media screen and (max-width:900px) {
+  .container{
+    width: 800px !important;
+  }
+    div.featuresContent{
+    width: 100%;
+    flex-wrap: wrap;
+    bottom: 30px;
+  }
+
+  div.featureBox{
+    width: 45%;
+  }
+
+  .links a {
+    color: var(--dark-grey);
+    text-decoration: none;
+    padding: 12px;
+    font-family: Lato;
+  }
+
+}
+@media screen and (max-width:800px) {
+  .logo {
+    width: 30%;
+      margin: auto;
+    }
+  .container{
+    width: 600px !important;
+  }
+ .navlinks{
+  background-color:rgba(14, 13, 13, 0.507);
+  height: 150px;
+  width: 150px;
+  position: absolute;
+  left: 10px;
+  top: 70px;
+  flex-direction: column;
+ }
+ .close{
+  display: block;
+  font-size: 30px;
+  color: var(--white);
+  position: absolute;
+  top: -5px;
+  right: 5px;
+ }
+ .navlinks li{
+  padding: 8px 0;
+ }
+ .navlinks li a{
+  color: var(--white);
+ }
+
+  .accountButton .button{
+    display: block;
+    background-color: var(--blue);
+    color: var(--white);
+    float:left;
+    margin: 5px;
+    padding: 10px 40px;
+
+  }
+  .accountButton{
+    width: 150px;
+    height: 150px;
+    background-color: rgba(14, 13, 13, 0.507);
+    flex-direction: column;
+    position: absolute;
+    top: 50px;
+    right: 0;
+  }
+  .closeButton{
+    background-color: transparent;
+    padding: 3px 19px;
+    color: var(--white);
+    border: 2px solid var(--white);
+    border-radius: 20px;
+    margin: 16px 10px;
+  }
+
+  .hamburger, .accountOptions,.closeButton{
+    display: block;
+  }
+    .navlinks,
+    .accountButton
+   {
+      display: none;
+    }
+  .bannerContent{
+    padding-bottom: 60px;
+  }
+  .bannerTexts{
+    top: 75px;
+  }
+  .bannerDescription {
+    font-size: 10px;
+  }
+  .businessConstant{
+    font-size: 10px;
+  }
+  .bannerHeading {
+    font-size: 40px;
+  }
+  div.featuresContent{
+    width: 100%;
+    flex-wrap: wrap;
+    bottom: 30px;
+  }
+  div.featureBox{
+    width: 45%;
+  }
+  .bannerBulletpoints ul {
+      width: 500px;
+    }
+}
+@media screen and (max-width:600px) {
+  .container{
+    width: 400px !important;
+  }
+  .businessConstant {
+    font-size: 5px;
+    font-weight: 400;
+    left: 0;
+    top: 15px;
+  }
+  .bannerContent{
+    flex-direction: column-reverse;
+  }
+
+  .bannerImage {
+    width: 100%;
+    height: 100%;
+  }
+  .bannerTexts {
+    width: 94%;
+    left: 0;
+  }
+  .bannerBulletpoints ul {
+    width: 100%;
+  }
+
+}
+@media screen and (max-width:400px) {
+  .container{
+    width: 200px !important;
+  }
+  div.featureBox {
+    width: 100%;
+  }
+  .bannerTexts {
+    width: 94%;
+    left: 0;
+    top: 0;
+  }
+  .bannerHeading {
+    font-size: 30px;
+  }
+    a.accountOptions {
+      padding: 4px 8px;
+    }
+  #banner {
+    padding-bottom: 76px;
+  }
+}
