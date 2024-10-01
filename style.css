@@ -143,7 +143,7 @@ a.active {
 }
 .bannerDescription {
   color: var(--dark-grey);
-  font-size: 16px;
+  font-size: 13px;
   margin-top: 10px;
   font-family: Lato;
   margin-bottom: 40px;
@@ -395,11 +395,13 @@ p, a{
     flex-direction: column-reverse;
   }
   .bannerBulletpoints ul{
-    column-gap: 15px;
+    column-gap: 23px;
   }
   .bannerBulletpoints ul li{
-    padding: 0px 20px;
+    padding: 0px 0px;
     font-size: 10px;
+    position: relative;
+    top: 3px;
   }
 
   div.featureBox{
@@ -423,16 +425,7 @@ p, a{
   a.accountOptions {
     padding: 4px 8px;
   }
-  .bannerBulletpoints ul {
-    column-gap: 23px;
-  }
 
-  .bannerBulletpoints ul li {
-    position: relative;
-    top: 2px;
-    padding: 0px 0px;
-    font-size: 10px;
-  }
   ::marker {
     font-size: 15px;
   }
