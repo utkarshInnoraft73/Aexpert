@@ -21,6 +21,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  /* overflow-x: hidden; */
 }
 .hamburger, .accountOptions{
   color: var(--blue);
@@ -36,29 +37,25 @@
   border-radius: 50%;
 }
 div.container{
-  width: 1200px;
+  max-width: 1320px;
   margin: auto;
-
 }
 
 #topNav{
-  height: 70px;
   background-color: var(--grey);
 }
 .content{
   padding: 10px 0;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
 }
 .navlinks{
-  width: 40%;
+  max-width: 39%;
   display: flex;
 }
-.logo{
-  margin: auto;
-}
-.logo img{
+
+.logo a img{
   width: 100%;
   height: auto;
 }
@@ -104,22 +101,20 @@ a.active {
 .bannerContent{
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .bannerTexts{
-  width: 40%;
-  position: relative;
-  top: -60px;
+  max-width: 40%;
+  padding: 20px 0;
 }
 
 .bannerImage{
-  width: 47%;
+  max-width: 47%;
   height: 100%;
 }
 
 .bannerImage img{
-  /* float: right; */
   width: 100%;
   height: auto;
 }
@@ -127,49 +122,47 @@ a.active {
 .businessConstant{
   color: var(--blue);
   position: relative;
-  left: 60px;
+  left: 50px;
   font-size: 16px;
   font-weight: 400;
 }
-.yellowLine{
-  height: 4px;
-  width: 50px;
-  position: relative;
-  top: 11px;
+.businessConstant::before{
+  content: "";
   background-color: var(--yellow);
+  height: 3px;
+  width: 40px;
+  position: absolute;
+  top: 7px;
+  left: -45px;
 }
 .bannerHeading {
   color: var(--black);
-  font-size: 70px;
+  font-size: 80px;
   font-weight: 400;
-  letter-spacing: 0.6px;
-  margin: 10px 0;
   font-family: BebasNeue;
 }
-
 .bannerDescription {
   color: var(--dark-grey);
-  font-size: 15px;
-  line-height: 20px;
+  font-size: 16px;
+  margin-top: 10px;
   font-family: Lato;
+  margin-bottom: 40px;
 }
-
 .getStartedButton{
   border-radius: 30px;
   padding: 15px 25px;
   text-decoration: none;
-  position: relative;
-  top: 40px;
   font-family: Lato;
 }
 .bannerBulletpoints{
-  position: relative;
-  top: 80px;
+  margin-top: 40px;
 }
 .bannerBulletpoints ul{
   display: flex;
   flex-wrap: wrap;
-  gap: 15px;
+  gap: 30px;
+  position: relative;
+  left: -20px
 }
 .bannerBulletpoints ul li{
   list-style: disc;
@@ -181,6 +174,7 @@ a.active {
   list-style: none;
   position: relative;
   top: 5px;
+  padding-left: 19px;
 }
 ::marker{
   color: var(--yellow);
@@ -188,7 +182,7 @@ a.active {
 }
 
 div.featuresContent{
-  width: 80%;
+  max-width: 80%;
   margin: auto;
   display: flex;
   justify-content: space-around;
@@ -196,10 +190,11 @@ div.featuresContent{
   bottom: 50px;
 }
 div.featureBox{
-  width: 23%;
+  max-width: 23%;
   padding: 20px;
   background-color: var(--white);
   transition: 0.3s;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 div.featureBox h3{
   font-size: 40px;
@@ -209,7 +204,7 @@ div.featureBox h3{
 }
 div.featureBox p{
   color: var(--dark-grey);
-  margin: 15px 0;
+  margin: 20px 0;
   font-family: Lato;
 }
 div.featureBox:hover{
@@ -229,96 +224,114 @@ div.featureBox:hover p {
 .closeButton {
   display: none;
 }
+p, a{
+  font-size: 16px;
+}
 
 @media screen and (max-width:1200px) {
-  .container{
-    width: 900px !important;
+  div.container{
+    max-width: 1140px;
   }
-  #banner{
-    padding-bottom: 150px;
+  .bannerHeading{
+    font-size: 65px;
   }
-  .bannerTexts{
-    top: 30px;
-    left: 30px;
+  .bannerDescription{
+    margin-bottom: 30px;
+  }
+  .getStartedButton{
+    padding: 10px 20px;
+  }
+  .bannerBulletpoints{
+    margin-top: 30px;
+  }
+  .bannerBulletpoints ul{
+    gap: 10px;
+  }
+  div.featuresContent {
+    bottom: 30px;
+  }
+}
+@media screen and (max-width:992px) {
+  div.container{
+    max-width: 960px;
   }
   .bannerHeading{
     font-size: 50px;
   }
-
-  .bannerBulletpoints ul li {
-    list-style: disc;
-    position: relative;
-    top: 5px;
-    left: 30px;
+  .bannerDescription{
+    font-size: 10px;
+    margin-top: 0px;
+    margin-bottom: 20px;
   }
-  .bannerBulletpoints ul li:nth-child(1),
-  .bannerBulletpoints ul li:nth-child(4) {
-    list-style: disc;
-    position: relative;
-    top: 5px;
+  .bannerBulletpoints{
+    margin-top: 15px;
+  }
+  .bannerBulletpoints ul {
+    gap: 5px;
   }
   div.featuresContent{
-    width: 100%;
-  }
-
-  .featuresBox{
-    width: 100% !important;
-  }
-}
-@media screen and (max-width:900px) {
-  .container{
-    width: 800px !important;
-  }
-    div.featuresContent{
-    width: 100%;
+    max-width: 100%;
     flex-wrap: wrap;
-    bottom: 30px;
+    bottom: 40px;
   }
-
-  div.featureBox{
-    width: 45%;
+  div.featureBox {
+    max-width: 45%;
+    margin-top: 10px;
   }
-
-  .links a {
-    color: var(--dark-grey);
-    text-decoration: none;
-    padding: 12px;
-    font-family: Lato;
+  .bannerBulletpoints ul {
+      column-gap: 15px;
   }
-
+  .bannerBulletpoints ul li {
+      padding: 0px 10px;
+  }
+  a, p{
+    font-size: 10px;
+  }
 }
-@media screen and (max-width:800px) {
-  .logo {
-    width: 30%;
-      margin: auto;
-    }
-  .container{
-    width: 600px !important;
-  }
- .navlinks{
-  background-color:rgba(14, 13, 13, 0.507);
-  height: 150px;
-  width: 150px;
-  position: absolute;
-  left: 10px;
-  top: 70px;
-  flex-direction: column;
- }
- .close{
-  display: block;
-  font-size: 30px;
-  color: var(--white);
-  position: absolute;
-  top: -5px;
-  right: 5px;
- }
- .navlinks li{
-  padding: 8px 0;
- }
- .navlinks li a{
-  color: var(--white);
- }
 
+@media screen and (max-width:768px) {
+  div.container{
+    max-width: 720px !important;
+  }
+  .content{
+    justify-content: space-between;
+    padding: 10px;
+  }
+  .bannerContent{
+    padding: 0 10px;
+  }
+  .bannerTexts, .bannerImage{
+    max-width: 50%;
+  }
+  .bannerBulletpoints ul {
+    column-gap: 25px;
+  }
+  .bannerBulletpoints ul li {
+    padding: 0PX;
+  }
+  .navlinks{
+    background-color:rgba(14, 13, 13, 0.507);
+    height: 150px;
+    width: 150px;
+    position: absolute;
+    left: 10px;
+    top: 70px;
+    flex-direction: column;
+  }
+  .close{
+    display: block;
+    font-size: 30px;
+    color: var(--white);
+    position: absolute;
+    top: -5px;
+    right: 5px;
+  }
+  .navlinks li{
+    padding: 8px 0;
+  }
+  .navlinks li a{
+    color: var(--white);
+  }
   .accountButton .button{
     display: block;
     background-color: var(--blue);
@@ -326,7 +339,6 @@ div.featureBox:hover p {
     float:left;
     margin: 5px;
     padding: 10px 40px;
-
   }
   .accountButton{
     width: 150px;
@@ -345,88 +357,88 @@ div.featureBox:hover p {
     border-radius: 20px;
     margin: 16px 10px;
   }
-
   .hamburger, .accountOptions,.closeButton{
     display: block;
   }
-    .navlinks,
-    .accountButton
-   {
-      display: none;
-    }
-  .bannerContent{
-    padding-bottom: 60px;
-  }
-  .bannerTexts{
-    top: 75px;
-  }
-  .bannerDescription {
-    font-size: 10px;
-  }
-  .businessConstant{
-    font-size: 10px;
-  }
-  .bannerHeading {
-    font-size: 40px;
-  }
-  div.featuresContent{
-    width: 100%;
-    flex-wrap: wrap;
-    bottom: 30px;
-  }
-  div.featureBox{
-    width: 45%;
-  }
-  .bannerBulletpoints ul {
-      width: 500px;
-    }
-}
-@media screen and (max-width:600px) {
-  .container{
-    width: 400px !important;
-  }
-  .businessConstant {
-    font-size: 5px;
-    font-weight: 400;
-    left: 0;
-    top: 15px;
-  }
-  .bannerContent{
-    flex-direction: column-reverse;
-  }
-
-  .bannerImage {
-    width: 100%;
-    height: 100%;
-  }
-  .bannerTexts {
-    width: 94%;
-    left: 0;
-  }
-  .bannerBulletpoints ul {
-    width: 100%;
-  }
-
-}
-@media screen and (max-width:400px) {
-  .container{
-    width: 200px !important;
-  }
-  div.featureBox {
-    width: 100%;
-  }
-  .bannerTexts {
-    width: 94%;
-    left: 0;
-    top: 0;
+  .navlinks,
+  .accountButton{
+    display: none;
   }
   .bannerHeading {
     font-size: 30px;
   }
-    a.accountOptions {
-      padding: 4px 8px;
-    }
-  #banner {
-    padding-bottom: 76px;
+  div.featuresContent {
+    bottom: 30px;
+  }
+  div.featureBox {
+    max-width: 100%;
+    margin-top: 10px;
   }
 }
+@media screen and (max-width:576px) {
+  div.container{
+    max-width: 540px !important;
+  }
+  .bannerTexts,
+  .bannerImage {
+    max-width: 80%;
+  }
+  .businessConstant {
+    left: 47px;
+    top: 0px;
+  }
+  .businessConstant::before {
+    top: 5px;
+    left: -45px;
+  }
+  .bannerContent{
+    flex-direction: column-reverse;
+  }
+  .bannerBulletpoints ul{
+    column-gap: 15px;
+  }
+  .bannerBulletpoints ul li{
+    padding: 0px 20px;
+    font-size: 10px;
+  }
+
+  div.featureBox{
+    max-width: 95%;
+  }
+  div.featureBox h3{
+    font-size: 30px;
+  }
+
+}
+@media screen and (max-width:576px) {
+  div.container{
+    max-width: 100%;
+  }
+  div.featureBox {
+    max-width: 90%;
+  }
+  .bannerHeading {
+    font-size: 30px;
+  }
+  a.accountOptions {
+    padding: 4px 8px;
+  }
+  .bannerBulletpoints ul {
+    column-gap: 23px;
+  }
+
+  .bannerBulletpoints ul li {
+    position: relative;
+    top: 2px;
+    padding: 0px 0px;
+    font-size: 10px;
+  }
+  ::marker {
+    font-size: 15px;
+  }
+  div.featuresContent {
+    bottom: -5px;
+  }
+}
+
+

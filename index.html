@@ -12,92 +12,105 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
     integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="script.js"></script>
-</head>
-<body>
-  <div class="wrapper">
-    <nav id="topNav">
-      <div class="container">
-        <div class="content">
-          <a href="#" class="hamburger"><i class="fa-solid fa-bars"></i></a>
-          <ul class="navlinks">
-            <li class="links "><a href="#" class="active">Home</a></li>
-            <li class="links"><a href="#">How it works</a></li>
-            <li class="links"><a href="#">Blog</a></li>
-            <li class="links"><a href="#">About</a></li>
-            <li class="links close"><i class="fa-solid fa-xmark"></i></li>
-          </ul>
-          <div class="logo">
-            <img src="./Images/Aexpert.svg" alt="Aexpert image" class="aexpert">
-          </div>
-          <a href="#" class="accountOptions"><i class="fa-solid fa-user"></i></a>
-          <div class="accountButton">
-            <a href="#" class="signup button">Sign up</a>
-            <a href="#" class="signin button">Sign in</a>
-            <button class="closeButton">close</button>
-          </div>
+  </head>
+  <body>
+  <!-- Navbar starts here. -->
+  <nav id="topNav">
+    <!-- Nav container starts here. -->
+    <div class="container">
+      <div class="content">
+        <!-- Hamburger for smaller size screen. -->
+        <a href="#" class="hamburger"><i class="fa-solid fa-bars"></i></a>
+        <!-- Nav menu links. -->
+        <ul class="navlinks">
+          <li class="links "><a href="#" class="active">Home</a></li>
+          <li class="links"><a href="#">How it works</a></li>
+          <li class="links"><a href="#">Blog</a></li>
+          <li class="links"><a href="#">About</a></li>
+          <li class="links close"><i class="fa-solid fa-xmark"></i></li>
+        </ul>
+        <!-- Site logo. -->
+        <div class="logo">
+          <a href="#"><img src="./Images/Aexpert.svg" alt="Aexpert image" class="aexpert" width="100" height="70"></a>
         </div>
-      </div>
-    </nav>
-    <div id="banner">
-      <div class="container">
-        <div class="bannerContent">
-          <div class="bannerTexts">
-            <div class="yellowLine"></div>
-            <p class="businessConstant">
-              Business constant
-            </p>
-            <h2 class="bannerHeading">
-              find the solution with the expert
-            </h2>
-            <p class="bannerDescription">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa impedit dolore veritatis, doloremque exercitationem beatae saepe. Voluptates, vero quasi odit quaerat id nulla enim quod amet atque inventore omnis
-            </p>
-            <a href="#" class="getStartedButton signup">Get started</a>
-            <div class="bannerBulletpoints">
-              <ul>
-                <li>Industries</li>
-                <li>Agriculture</li>
-                <li>Automotive</li>
-                <li>Chemicals</li>
-                <li>Engineering</li>
-                <li>Healthcare</li>
-              </ul>
-            </div>
-          </div>
-          <div class="bannerImage">
-            <img src="./Images/banner-img.png" alt="Banner image">
-          </div>
-        </div>
-      </div>
-    </div>
 
-    <div class="features">
-      <div class="container">
-        <div class="featuresContent">
-          <div class="featureBox">
-            <h3>700+<br>EMPLOYEES</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, totam!</p>
-            <div class="featureLine"></div>
-          </div>
-          <div class="featureBox">
-            <h3>10+<br>YEARS</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, totam!</p>
-            <div class="featureLine"></div>
-          </div>
-          <div class="featureBox">
-            <h3>12+<br>LOCATIONS</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, totam!</p>
-            <div class="featureLine"></div>
-          </div>
-          <div class="featureBox">
-            <h3>100%<br>SATISFACTION</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, totam!</p>
-            <div class="featureLine"></div>
-          </div>
+        <!-- Account icons for smaller size screen.-->
+        <a href="#" class="accountOptions"><i class="fa-solid fa-user"></i></a>
+        <!-- Account button for signin/signup. -->
+        <div class="accountButton">
+          <a href="#" class="signup button">Sign up</a>
+          <a href="#" class="signin button">Sign in</a>
+          <button class="closeButton">Close</button>
         </div>
       </div>
     </div>
-  </div>
+  </nav>
+  <!-- Navbar ends here.-->
+  <!-- Main bannner starts here. -->
+  <main id="banner">
+    <div class="container">
+      <div class="bannerContent">
+        <!-- Banner left side texts.-->
+        <div class="bannerTexts">
+          <p class="businessConstant">
+            Business constant
+          </p>
+          <h1 class="bannerHeading">
+            find the solution with the expert
+          </h1>
+          <p class="bannerDescription">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa impedit dolore veritatis, doloremque exercitationem beatae saepe. Voluptates, vero quasi odit quaerat id nulla enim quod amet atque inventore omnis
+          </p>
+          <a href="#" class="getStartedButton signup">Get started</a>
+          <div class="bannerBulletpoints">
+            <ul>
+              <li>Industries</li>
+              <li>Agriculture</li>
+              <li>Automotive</li>
+              <li>Chemicals</li>
+              <li>Engineering</li>
+              <li>Healthcare</li>
+            </ul>
+          </div>
+        </div>
+        <!-- Banner right side image. -->
+        <div class="bannerImage">
+          <img src="./Images/banner-img.png" alt="Banner image">
+        </div>
+      </div>
+    </div>
+  </main>
+  <!-- Main banner ends here. -->
+  <!-- Footer starts here. -->
+  <footer class="features">
+    <div class="container">
+      <div class="featuresContent">
+        <div class="featureBox">
+          <h3>700+<br>EMPLOYEES</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, totam!</p>
+          <div class="featureLine"></div>
+        </div>
+        <div class="featureBox">
+          <h3>10+<br>YEARS</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, totam!</p>
+          <div class="featureLine"></div>
+        </div>
+        <div class="featureBox">
+          <h3>12+<br>LOCATIONS</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, totam!</p>
+          <div class="featureLine"></div>
+        </div>
+        <div class="featureBox">
+          <h3>100%<br>SATISFACTION</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, totam!</p>
+          <div class="featureLine"></div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- Footer ends here. -->
+
+  <!-- Custom javascript link here, added to make Navbar responsive. -->
+  <script src="script.js"></script>
 </body>
 </html>

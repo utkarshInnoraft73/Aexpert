@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(document).ready(function(event){
   $('.hamburger').click(function(){
     $('.navlinks').show('3000');
   })
@@ -10,6 +10,5 @@ $(document).ready(function(){
   })
   $('.closeButton').click(function(){
     $('.accountButton').hide('3000');
-    // console.log('closed');
   })
 })
