@@ -1,0 +1,451 @@
+@font-face {
+  font-family: BebasNeue;
+  src: url(./fonts/BebasNeue-Regular.ttf);
+}
+
+@font-face {
+  font-family: Lato;
+  src: url(./fonts/Lato-Regular.ttf);
+}
+
+:root {
+  --black: #3D3D3D;
+  --dark-grey: #666666;
+  --blue: #007A82;
+  --yellow: #FEBB0C;
+  --grey: #EDEDED;
+  --white: #FFFFFF;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+li{
+  list-style: none;
+}
+.display-flex{
+  display: flex;
+}
+.justify-center{
+  justify-content: center;
+}
+.justify-space-around{
+  justify-content: space-around;
+}
+.justify-space-between{
+  justify-content: space-between;
+}
+.item-center{
+  align-items: center;
+}
+.flex-wrap{
+  flex-wrap: wrap;
+}
+.width-33{
+  width: 33%;
+}
+.max-width-40{
+  max-width: 40%;
+}
+.max-width-50{
+  max-width: 50%;
+}
+.max-width-60{
+  max-width: 60%;
+}
+.max-width-70{
+  max-width: 70%;
+}
+.max-width-80{
+  max-width: 80%;
+}
+.max-width-100{
+  max-width: 100%;
+}
+.hamburger, .accountOptions{
+  color: var(--blue);
+  font-size: 20px;
+  text-decoration: none;
+  display: none;
+}
+.close{
+  display: none;
+}
+span{
+  display: block;
+}
+.accountOptions {
+  border: 2px solid var(--blue);
+  border-radius: 50%;
+}
+.container{
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+#topNav{
+  background-color: var(--grey);
+}
+.content{
+  padding: 10px 0;
+}
+
+.image-responsive{
+  width: 100%;
+  height: auto;
+}
+
+.accountButton a{
+  float: right;
+  padding: 12px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-family: Lato;
+}
+a.accountOptions{
+  padding: 5px 9px;
+}
+.signin{
+  color: var(--dark-grey);
+  margin-right: 12px;
+}
+.signup{
+  color: var(--white);
+  background-color: var(--blue);
+  margin-right: 12px;
+}
+.links {
+  list-style: none;
+}
+.links a{
+  color: var(--dark-grey);
+    text-decoration: none;
+    padding: 5px 10px;
+    font-family: Lato;
+    margin: 0px 5px;
+}
+a.active {
+  color: var(--yellow);
+}
+
+#banner{
+  background-color: var(--grey);
+}
+
+.bannerTexts{
+  padding: 20px 0;
+  max-width: 40%;
+}
+
+.businessConstant{
+  color: var(--blue);
+  position: relative;
+  left: 60px;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: Lato;
+}
+.businessConstant::before{
+  content: "";
+  background-color: var(--yellow);
+  height: 3px;
+  width: 40px;
+  position: absolute;
+  top: 9px;
+  left: -55px;
+  z-index: 1;
+
+}
+.bannerHeading {
+  color: var(--black);
+  font-size: 75px;
+  font-weight: 300;
+  font-family: BebasNeue;
+}
+.bannerDescription {
+  color: var(--dark-grey);
+  font-size: 13px;
+  margin-top: 10px;
+  font-family: Lato;
+  margin-bottom: 40px;
+}
+.getStartedButton{
+  border-radius: 30px;
+  padding: 15px 25px;
+  text-decoration: none;
+  font-family: Lato;
+}
+.bannerImage{
+  max-width: 40%;
+}
+.navlinks{
+  justify-content: left;
+}
+.bannerBulletpoints ul{
+  margin: 30px 0;
+}
+.bannerBulletpoints ul li{
+  color: var(--dark-grey);
+  padding: 8px 0px;
+  font-family: Lato;
+  position: relative;
+  top: 5px;
+}
+.bannerBulletpoints ul li::before{
+  content: '';
+  display: block;
+  width: 8px;
+  border-radius: 50%;
+  height: 8px;
+  background-color: var(--yellow);
+  position: absolute;
+  top: 12px;
+  left: -52px;
+}
+
+.bannerBulletpoints ul li:nth-child(1)::before, .bannerBulletpoints ul li:nth-child(4)::before{
+  width: 0px;
+  height: 0px;
+}
+
+.featuresContent{
+  margin: 0 auto;
+  position: relative;
+  bottom: 30px;
+}
+div.featureBox{
+  max-width: 24%;
+  padding: 15px;
+  background-color: var(--white);
+  transition: 0.3s;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+div.featureBox h3{
+  font-size: 30px;
+  font-weight: 400;
+  font-family: BebasNeue;
+  color: var(--blue);
+}
+
+div.featureBox p{
+  color: var(--dark-grey);
+  margin: 18px 0;
+  font-family: Lato;
+  font-size: 13px;
+}
+div.featureBox p::after{
+  content: '';
+    display: block;
+    width: 100%;
+    height: 10px;
+    height: 4px;
+    background-color: var(--yellow);
+    position: relative;
+    top: 14px;
+}
+div.featureBox:hover{
+  background-color: var(--blue);
+}
+div.featureBox:hover h3 , div.featureBox:hover h3 span{
+  color: var(--yellow);
+}
+div.featureBox:hover p {
+  color: var(--white);
+}
+.closeButton {
+  display: none;
+}
+
+@media screen and (max-width:1200px) {
+  .container{
+    max-width: 1140px;
+  }
+  .bannerTexts{
+    max-width: 40%;
+  }
+  .bannerImage{
+    max-width: 45%;
+  }
+  .bannerHeading{
+    font-size: 55px;
+  }
+  .bannerDescription{
+    margin-bottom: 30px;
+  }
+  .getStartedButton{
+    padding: 10px 20px;
+  }
+  .bannerBulletpoints ul li{
+    position: relative;
+    top: 4px;
+    max-width: 30%;
+  }
+  div.featuresContent {
+    bottom: 30px;
+  }
+}
+@media screen and (max-width:992px) {
+  .container{
+    max-width: 960px;
+  }
+  .bannerHeading{
+    font-size: 50px;
+  }
+  .bannerDescription{
+    margin-bottom: 20px;
+  }
+  .bannerBulletpoints {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+
+  div.featuresContent{
+    max-width: 100%;
+    flex-wrap: wrap;
+    bottom: 20px;
+  }
+  div.featureBox {
+    max-width: 48%;
+    margin-top: 10px;
+  }
+.bannerBulletpoints ul li::before {
+  top: 15px;
+    left: -28px;
+    width: 7px;
+    height: 7px;
+}
+}
+
+@media screen and (max-width:768px) {
+  div.container{
+    max-width: 720px;
+  }
+  .content{
+    justify-content: space-between;
+    padding: 10px;
+  }
+  .bannerContent{
+    padding: 0 10px;
+  }
+  .bannerTexts, .bannerImage{
+    max-width: 50%;
+  }
+  .bannerBulletpoints ul li::before {
+    left: -18px;
+    width: 5px;
+    height: 5px;
+  }
+  .bannerBulletpoints ul li {
+    font-size: 10px;
+  }
+  .navlinks{
+    background-color:rgba(14, 13, 13, 0.8);
+    height: 150px;
+    max-width: 150px;
+    position: absolute;
+    left: 10px;
+    top: 40px;
+    flex-direction: column;
+    z-index: 2;
+  }
+  .close{
+    display: block;
+    font-size: 20px;
+    color: var(--white);
+    position: absolute;
+    top:0;
+    right: 15px;
+  }
+  .navlinks li{
+    padding: 8px 0;
+  }
+  .navlinks li a{
+    color: var(--white);
+  }
+  .accountButton .button{
+    display: block;
+    background-color: var(--blue);
+    color: var(--white);
+    float: left;
+    margin: 5px;
+    padding: 9px 26px;
+  }
+  .accountButton{
+    width: 150px;
+    height: 150px;
+    background-color: rgba(14, 13, 13, 0.8);
+    flex-direction: column;
+    position: absolute;
+    top: 50px;
+    right: 0;
+  }
+  .closeButton{
+    background-color: transparent;
+    padding: 3px 19px;
+    color: var(--white);
+    border: 2px solid var(--white);
+    border-radius: 20px;
+    margin: 16px 10px;
+  }
+  .hamburger, .accountOptions,.closeButton{
+    display: block;
+  }
+  .navlinks,
+  .accountButton{
+    display: none;
+  }
+  .bannerHeading {
+    font-size: 48px;
+  }
+  div.featuresContent {
+    bottom: 30px;
+  }
+  div.featureBox {
+    max-width: 100%;
+    margin-top: 10px;
+  }
+}
+@media screen and (max-width:576px) {
+  div.container{
+    max-width: 100%;
+  }
+  .bannerTexts,
+  .bannerImage {
+    max-width: 100%;
+  }
+  .businessConstant {
+    display: inline-block;
+    left: 47px;
+  }
+  .businessConstant::before {
+    top: 9px;
+    left: -45px;
+  }
+  .bannerContent{
+    flex-direction: column-reverse;
+  }
+
+  .bannerBulletpoints ul li{
+    font-size: 10px;
+    width: 33%;
+  }
+  .bannerBulletpoints ul li::before {
+    left: -12px;
+    width: 5px;
+    height: 5px;
+  }
+  div.featureBox{
+    max-width: 95%;
+  }
+  div.featureBox h3{
+    font-size: 30px;
+  }
+  div.featuresContent {
+    bottom: 0px;
+  }
+  .bannerHeading {
+    font-size: 30px;
+  }
+}
