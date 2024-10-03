@@ -130,6 +130,7 @@ a.active {
   left: 50px;
   font-size: 16px;
   font-weight: 400;
+  font-family: Lato;
 }
 .businessConstant::before{
   content: "";
@@ -407,7 +408,7 @@ p, a{
     left: 47px;
   }
   .businessConstant::before {
-    top: 5px;
+    top: 9px;
     left: -45px;
   }
     .bannerBulletpoints{
