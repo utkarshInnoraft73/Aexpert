@@ -22,6 +22,48 @@
   padding: 0;
   box-sizing: border-box;
 }
+li{
+  list-style: none;
+}
+.display-flex{
+  display: flex;
+}
+.justify-center{
+  justify-content: center;
+}
+.justify-space-around{
+  justify-content: space-around;
+}
+.justify-space-between{
+  justify-content: space-between;
+}
+.item-center{
+  align-items: center;
+}
+.flex-wrap{
+  flex-wrap: wrap;
+}
+.width-33{
+  width: 33%;
+}
+.max-width-40{
+  max-width: 40%;
+}
+.max-width-50{
+  max-width: 50%;
+}
+.max-width-60{
+  max-width: 60%;
+}
+.max-width-70{
+  max-width: 70%;
+}
+.max-width-80{
+  max-width: 80%;
+}
+.max-width-100{
+  max-width: 100%;
+}
 .hamburger, .accountOptions{
   color: var(--blue);
   font-size: 20px;
@@ -38,9 +80,9 @@ span{
   border: 2px solid var(--blue);
   border-radius: 50%;
 }
-div.container{
+.container{
   max-width: 1320px;
-  margin: auto;
+  margin: 0 auto;
 }
 
 #topNav{
@@ -48,22 +90,13 @@ div.container{
 }
 .content{
   padding: 10px 0;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-.navlinks{
-  max-width: 39%;
-  display: flex;
 }
 
-.logo a img{
+.image-responsive{
   width: 100%;
   height: auto;
 }
-.accountButton{
-  width: 40%;
-}
+
 .accountButton a{
   float: right;
   padding: 12px 20px;
@@ -101,25 +134,9 @@ a.active {
   background-color: var(--grey);
 }
 
-.bannerContent{
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-}
-
 .bannerTexts{
-  max-width: 40%;
   padding: 20px 0;
-}
-
-.bannerImage{
-  max-width: 47%;
-  height: 100%;
-}
-
-.bannerImage img{
-  width: 100%;
-  height: auto;
+  max-width: 40%;
 }
 
 .businessConstant{
@@ -160,67 +177,73 @@ a.active {
   text-decoration: none;
   font-family: Lato;
 }
-.bannerBulletpoints{
-  margin-top: 40px;
-  max-width: 370px;
-  min-width: 270px;
+.bannerImage{
+  max-width: 40%;
+}
+.navlinks{
+  justify-content: left;
 }
 .bannerBulletpoints ul{
-  display: flex;
-  flex-wrap: wrap;
-  column-gap: 15px;
-  row-gap: 10px;
-  position: relative;
-  left: -20px;
+  margin: 30px 0;
 }
 .bannerBulletpoints ul li{
-  list-style: disc;
   color: var(--dark-grey);
-  padding: 0px 20px;
+  padding: 8px 0px;
   font-family: Lato;
-}
-.bannerBulletpoints ul li:nth-child(1), .bannerBulletpoints ul li:nth-child(4){
-  list-style: none;
   position: relative;
   top: 5px;
-  padding-left: 19px;
 }
-::marker{
-  color: var(--yellow);
-  font-size: 20px;
+.bannerBulletpoints ul li::before{
+  content: '';
+  display: block;
+  width: 8px;
+  border-radius: 50%;
+  height: 8px;
+  background-color: var(--yellow);
+  position: absolute;
+  top: 12px;
+  left: -52px;
 }
 
-div.featuresContent{
-  max-width: 80%;
-  margin: auto;
-  display: flex;
-  justify-content: space-around;
+.bannerBulletpoints ul li:nth-child(1)::before, .bannerBulletpoints ul li:nth-child(4)::before{
+  width: 0px;
+  height: 0px;
+}
+
+.featuresContent{
+  margin: 0 auto;
   position: relative;
-  bottom: 50px;
+  bottom: 30px;
 }
 div.featureBox{
-  max-width: 23%;
-  padding: 20px;
+  max-width: 24%;
+  padding: 15px;
   background-color: var(--white);
   transition: 0.3s;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 div.featureBox h3{
-  font-size: 40px;
+  font-size: 30px;
   font-weight: 400;
   font-family: BebasNeue;
   color: var(--blue);
 }
-div.featureBox h3 span{
-  font-size: 40px;
-  font-weight: 400;
-  font-family: BebasNeue;
-  color: var(--blue);
-}
+
 div.featureBox p{
   color: var(--dark-grey);
-  margin: 20px 0;
+  margin: 18px 0;
   font-family: Lato;
+  font-size: 13px;
+}
+div.featureBox p::after{
+  content: '';
+    display: block;
+    width: 100%;
+    height: 10px;
+    height: 4px;
+    background-color: var(--yellow);
+    position: relative;
+    top: 14px;
 }
 div.featureBox:hover{
   background-color: var(--blue);
@@ -231,24 +254,22 @@ div.featureBox:hover h3 , div.featureBox:hover h3 span{
 div.featureBox:hover p {
   color: var(--white);
 }
-.featureLine{
-  width: 100%;
-  height: 4px;
-  background-color: var(--yellow);
-}
 .closeButton {
   display: none;
 }
-p, a{
-  font-size: 16px;
-}
 
 @media screen and (max-width:1200px) {
-  div.container{
+  .container{
     max-width: 1140px;
   }
+  .bannerTexts{
+    max-width: 40%;
+  }
+  .bannerImage{
+    max-width: 45%;
+  }
   .bannerHeading{
-    font-size: 65px;
+    font-size: 55px;
   }
   .bannerDescription{
     margin-bottom: 30px;
@@ -258,26 +279,21 @@ p, a{
   }
   .bannerBulletpoints ul li{
     position: relative;
-      top: 4px;
-  }
-  ::marker {
-    color: var(--yellow);
-    font-size: 15px;
+    top: 4px;
+    max-width: 30%;
   }
   div.featuresContent {
     bottom: 30px;
   }
 }
 @media screen and (max-width:992px) {
-  div.container{
+  .container{
     max-width: 960px;
   }
   .bannerHeading{
     font-size: 50px;
   }
   .bannerDescription{
-    font-size: 10px;
-    margin-top: 0px;
     margin-bottom: 20px;
   }
   .bannerBulletpoints {
@@ -294,15 +310,12 @@ p, a{
     max-width: 48%;
     margin-top: 10px;
   }
-  .bannerBulletpoints ul {
-      column-gap: 15px;
-  }
-  .bannerBulletpoints ul li {
-      padding: 0px 10px;
-  }
-  a, p{
-    font-size: 10px;
-  }
+.bannerBulletpoints ul li::before {
+  top: 15px;
+    left: -28px;
+    width: 7px;
+    height: 7px;
+}
 }
 
 @media screen and (max-width:768px) {
@@ -319,11 +332,13 @@ p, a{
   .bannerTexts, .bannerImage{
     max-width: 50%;
   }
-  .bannerBulletpoints ul {
-    column-gap: 25px;
+  .bannerBulletpoints ul li::before {
+    left: -18px;
+    width: 5px;
+    height: 5px;
   }
   .bannerBulletpoints ul li {
-    padding: 0PX;
+    font-size: 10px;
   }
   .navlinks{
     background-color:rgba(14, 13, 13, 0.8);
@@ -331,7 +346,7 @@ p, a{
     max-width: 150px;
     position: absolute;
     left: 10px;
-    top: 55px;
+    top: 40px;
     flex-direction: column;
     z-index: 2;
   }
@@ -353,10 +368,9 @@ p, a{
     display: block;
     background-color: var(--blue);
     color: var(--white);
-    float:left;
+    float: left;
     margin: 5px;
-    padding: 10px 40px;
-    z-index: 11;
+    padding: 9px 26px;
   }
   .accountButton{
     width: 150px;
@@ -409,26 +423,19 @@ p, a{
     top: 9px;
     left: -45px;
   }
-    .bannerBulletpoints{
-      max-width: 250px;
-      min-width: 250px;
-    }
   .bannerContent{
     flex-direction: column-reverse;
   }
-            .bannerBulletpoints ul {
-              column-gap: 25px;
-            }
-  div.bannerBulletpoints ul li {
-    padding: 0px 0px;
-    font-size: 12px;
-    top: 5px;
-    position: relative;
+
+  .bannerBulletpoints ul li{
+    font-size: 10px;
+    width: 33%;
   }
- ::marker {
-   color: var(--yellow);
-   font-size: 10px;
- }
+  .bannerBulletpoints ul li::before {
+    left: -12px;
+    width: 5px;
+    height: 5px;
+  }
   div.featureBox{
     max-width: 95%;
   }
