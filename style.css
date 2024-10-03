@@ -21,6 +21,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  /* overflow-x: hidden; */
+  /* overflow-y: visible; */
 }
 .hamburger, .accountOptions{
   color: var(--blue);
@@ -30,6 +32,9 @@
 }
 .close{
   display: none;
+}
+span{
+  display: block;
 }
 .accountOptions {
   border: 2px solid var(--blue);
@@ -158,11 +163,13 @@ a.active {
 }
 .bannerBulletpoints{
   margin-top: 40px;
+  max-width: 370px;
+  min-width: 270px;
 }
 .bannerBulletpoints ul{
   display: flex;
   flex-wrap: wrap;
-  column-gap: 20px;
+  column-gap: 15px;
   row-gap: 10px;
   position: relative;
   left: -20px;
@@ -170,7 +177,7 @@ a.active {
 .bannerBulletpoints ul li{
   list-style: disc;
   color: var(--dark-grey);
-  padding: 0px 30px;
+  padding: 0px 20px;
   font-family: Lato;
 }
 .bannerBulletpoints ul li:nth-child(1), .bannerBulletpoints ul li:nth-child(4){
@@ -205,6 +212,12 @@ div.featureBox h3{
   font-family: BebasNeue;
   color: var(--blue);
 }
+div.featureBox h3 span{
+  font-size: 40px;
+  font-weight: 400;
+  font-family: BebasNeue;
+  color: var(--blue);
+}
 div.featureBox p{
   color: var(--dark-grey);
   margin: 20px 0;
@@ -213,7 +226,7 @@ div.featureBox p{
 div.featureBox:hover{
   background-color: var(--blue);
 }
-div.featureBox:hover h3 {
+div.featureBox:hover h3 , div.featureBox:hover h3 span{
   color: var(--yellow);
 }
 div.featureBox:hover p {
@@ -244,11 +257,13 @@ p, a{
   .getStartedButton{
     padding: 10px 20px;
   }
-  .bannerBulletpoints{
-    margin-top: 30px;
+  .bannerBulletpoints ul li{
+    position: relative;
+      top: 4px;
   }
-  .bannerBulletpoints ul{
-    gap: 10px;
+  ::marker {
+    color: var(--yellow);
+    font-size: 15px;
   }
   div.featuresContent {
     bottom: 30px;
@@ -268,18 +283,16 @@ p, a{
   }
   .bannerBulletpoints {
     margin-top: 15px;
-    max-width: 350px;
+    margin-bottom: 15px;
   }
-  .bannerBulletpoints ul {
-    gap: 5px;
-  }
+
   div.featuresContent{
     max-width: 100%;
     flex-wrap: wrap;
-    bottom: 40px;
+    bottom: 20px;
   }
   div.featureBox {
-    max-width: 45%;
+    max-width: 48%;
     margin-top: 10px;
   }
   .bannerBulletpoints ul {
@@ -397,15 +410,19 @@ p, a{
     top: 5px;
     left: -45px;
   }
+    .bannerBulletpoints{
+      max-width: 250px;
+      min-width: 250px;
+    }
   .bannerContent{
     flex-direction: column-reverse;
   }
-  .bannerBulletpoints ul {
-    column-gap: 10px;
-  }
-  .bannerBulletpoints ul li {
-    padding: 0px 15px;
-    /* font-size: 14px; */
+            .bannerBulletpoints ul {
+              column-gap: 25px;
+            }
+  div.bannerBulletpoints ul li {
+    padding: 0px 0px;
+    font-size: 12px;
     top: 5px;
     position: relative;
   }
@@ -421,5 +438,8 @@ p, a{
   }
   div.featuresContent {
     bottom: 0px;
+  }
+  .bannerHeading {
+    font-size: 30px;
   }
 }
