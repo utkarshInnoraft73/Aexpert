@@ -395,10 +395,10 @@ p, a{
     flex-direction: column-reverse;
   }
   .bannerBulletpoints ul{
-    column-gap: 23px;
+    column-gap: 20px;
   }
   .bannerBulletpoints ul li{
-    padding: 0px 0px;
+    padding: 0px 10px;
     font-size: 10px;
     position: relative;
     top: 3px;
@@ -410,10 +410,13 @@ p, a{
   div.featureBox h3{
     font-size: 30px;
   }
+  div.featuresContent {
+    bottom: 0px;
+  }
 
 }
 @media screen and (max-width:576px) {
-  div.container{
+  /* div.container{
     max-width: 100%;
   }
   div.featureBox {
@@ -431,7 +434,7 @@ p, a{
   }
   div.featuresContent {
     bottom: -5px;
-  }
+  } */
 }
 
 
