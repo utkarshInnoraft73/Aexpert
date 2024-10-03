@@ -401,7 +401,7 @@ p, a{
     padding: 0px 10px;
     font-size: 10px;
     position: relative;
-    top: 3px;
+    /* top: 3px; */
   }
 
   div.featureBox{
