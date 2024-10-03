@@ -404,8 +404,8 @@ p, a{
     column-gap: 10px;
   }
   .bannerBulletpoints ul li {
-    padding: 0px 10px;
-    font-size: 14px;
+    padding: 0px 12px;
+    /* font-size: 14px; */
     top: 5px;
     position: relative;
   }
