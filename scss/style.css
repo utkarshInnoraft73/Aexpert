@@ -117,8 +117,9 @@ a.active_button {
     background-color: rgba(14, 13, 13, 0.8);
     flex-direction: column;
     position: absolute;
-    top: 54px;
-    right: 109px;
+    top: 10px;
+    right: 0px;
+    z-index: 222;
   }
   .hamburger, .accountOptions, .closeButton {
     display: block;
@@ -131,11 +132,12 @@ a.active_button {
     font-size: 20px;
     color: #FFFFFF;
     border: 2px solid #FFFFFF;
+    background-color: #3D3D3D;
     border-radius: 20px;
     margin: 16px 10px;
   }
   .nav_content__account_button {
-    display: none !important;
+    display: none;
   }
 }
 @font-face {

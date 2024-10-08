@@ -1,6 +1,6 @@
 $(document).ready(function(event){
     $('.hamburger').click(function(){
-      $('.nav_content__navlinks').show('3000').focus();;
+      $('.nav_content__navlinks').show('3000').focus();
     })
     $('.accountOptions').click(function(){
       $('.nav_content__account_button').show('3000').focus();
@@ -14,4 +14,4 @@ $(document).ready(function(event){
     $('.nav_content__navlinks, .nav_content__account_button').on('blur', function () {
       $(this).hide('3000');
     });
-  })
+})
