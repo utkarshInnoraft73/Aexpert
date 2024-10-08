@@ -1,0 +1,61 @@
+@import './../base/variables';
+@import "./../base/typography";
+.footer{
+    position: relative;
+    bottom: 40px;
+}
+.footer__feature--box{
+    max-width: 20%;
+    background-color: $light-color;
+    padding: 15px 20px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    margin: 10px 10px;
+    &::after{
+        content: "";
+        display: block;
+        height: 5px;
+        width: 100%;
+        background-color: $primary-color;
+        position: relative;
+        z-index: 22;
+    }
+    h2{
+        font-size: 40px;
+        color: $secondary-color;
+        text-transform: uppercase;
+        font-weight: 400;
+        font-family: Bebas_Neue;
+        span{
+            display: block;
+        }
+    }
+    p{
+        color: $gray-color;
+        font-family: Lato_Regular;
+        
+    }
+}
+.footer__feature--box:hover{
+    background-color: $secondary-color;
+    h2{
+        
+        color: $primary-color;   
+    }
+    p{
+        color: $light-color;   
+
+    }
+}
+
+@media screen and (max-width:1400px) {
+    .footer__feature--box{
+        h2{
+            font-size: 30px;
+        }
+    }
+}
+@media screen and (max-width:1200px) {
+    .footer{
+        bottom: 10px;
+    }
+}

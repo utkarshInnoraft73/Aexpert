@@ -1,0 +1,127 @@
+@import './../base/variables';
+@import "./../base/typography";
+img{
+    height: auto;
+    width: 100%;
+}
+.banner__content--bcs{
+    position: relative;
+    left: 60px;
+    font-family: Lato_Regular;
+    color: $secondary-color;
+    max-width: 160px;
+
+    &:before{
+        content: "";
+        width: 50px;
+        height: 4px;
+        display: block;
+        position: relative;
+        left: -58px;
+        top: 14px;
+        background-color: $primary-color;
+    }
+}
+
+.banner__content--heading{
+    h1{
+
+        font-size: $heading-size;
+        font-family: Bebas_Neue;
+    }
+}
+.banner__content--subtext{
+    color: $gray-color;
+    margin: 10px 0;
+    font-family: Lato_Regular;
+}
+.banner__content--button{
+    padding: 15px 0;
+
+    a{
+        text-decoration: none;
+        padding: 15px 22px;
+        background-color: $secondary-color;
+        color: $light-color;
+        border-radius: 25px;
+        font-family: Lato_Regular;
+    }
+}
+.banner__content--bullet_points{
+    ul{
+        position: relative;
+        left: -30px;
+        flex-wrap: wrap;
+        list-style: none;
+        
+        li{
+            width: 33%;
+            font-family: Lato_Regular;
+            color: $gray-color;
+            &:before{
+                content: "";
+                display: block;
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background-color: $primary-color;
+                position: relative;
+                left: -55px;
+                top: 17px;
+            }
+        }
+        li:nth-child(1), li:nth-child(4){
+            position: relative;
+            top: 10px;
+        } 
+        li:nth-child(1)::before, li:nth-child(4)::before{
+            width: 0px;
+            height: 0px;
+        } 
+    }
+}
+
+
+@media screen and (max-width:992px) {
+    .banner__content--bullet_points{
+        ul{ 
+            li{
+                &::before{
+                    left: -15px;
+                    width: 7px;
+                    height: 7px;
+                }
+            } 
+        }
+    }
+    
+}
+@media screen and (max-width:576px) {
+    .banner__content--heading{
+        h1{
+            font-size: 50px;
+        }
+    }
+    .banner__content--bullet_points{
+        ul{ 
+            li{
+                font-size: 12px;
+                &::before{
+                    left: -15px;
+                    top: 12px;
+                    width: 5px;
+                    height: 5px;
+                }
+            } 
+            li:nth-child(1), li:nth-child(4){
+                position: relative;
+                top: 5px;
+            } 
+            li:nth-child(1)::before, li:nth-child(4)::before{
+                width: 0px;
+                height: 0px;
+            }
+        }
+    }
+    
+}

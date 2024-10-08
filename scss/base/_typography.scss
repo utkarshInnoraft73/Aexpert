@@ -1,0 +1,28 @@
+
+// Fonts on the site.
+@font-face {
+    font-family: Bebas_Neue;
+    src: url(./../../fonts/Bebas_Neue/BebasNeue-Regular.ttf);
+}
+@font-face {
+    font-family: Lato_Regular;
+    src: url(./../../fonts/Lato/Lato-Regular.ttf);
+}
+@font-face {
+    font-family: Lato_Dark;
+    src: url(./../../fonts/Lato/Lato-Black.ttf);
+}
+@font-face {
+    font-family: Lato_Thin;
+    src: url(./../../fonts/Lato/Lato-Thin.ttf);
+}
+@font-face {
+    font-family: Lato_Bold;
+    src: url(./../../fonts/Lato/Lato-Bold.ttf);
+}
+
+// Font sizes variables.
+
+$heading-size: 90px;
+$subheading-size: 25px;
+$text-size: 20px;
