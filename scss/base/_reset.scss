@@ -1,19 +1,32 @@
-@import "./variables";
-*{
+@use "./../importer" as *;
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
 }
-li{
+li {
     list-style: none;
 }
-a{
+a {
     text-decoration: none;
+    &:hover {
+        color: $primary-color !important;
+    }
 }
-a:hover{
-    color: $primary-color !important;
-}
-header, main{
+header, main {
     background-color: $bg-color;
+}
+img{
+    height: auto;
+    width: 100%;
+}
+h1{
+    font-size: $heading-size !important;
+    font-family: Bebas_Neue !important;
+}
+@media screen and (max-width:576px) {
+    h1{
+        font-size: $subheading-size !important;
+        font-family: Bebas_Neue !important;
+    }
 }

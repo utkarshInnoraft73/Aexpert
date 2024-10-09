@@ -1,8 +1,7 @@
-@import './../base/variables';
-@import "./../base/typography";
+@use "./../importer" as *;
+@use "./../base/mixin" as *;
 .footer{
-    position: relative;
-    bottom: 40px;
+    @include content-position(relative, 0, 0, 40px, 0);
 }
 .footer__feature--box{
     max-width: 20%;
@@ -10,21 +9,17 @@
     padding: 15px 20px;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
     margin: 10px 10px;
-    &::after{
+    &:after{
         content: "";
-        display: block;
-        height: 5px;
-        width: 100%;
+        @include pseudo-elements(block, 5px, 100%);
         background-color: $primary-color;
-        position: relative;
         z-index: 22;
     }
     h2{
         font-size: 40px;
-        color: $secondary-color;
         text-transform: uppercase;
         font-weight: 400;
-        font-family: Bebas_Neue;
+        @include sub-texts($secondary-color, Bebas_Neue);
         span{
             display: block;
         }
@@ -38,12 +33,10 @@
 .footer__feature--box:hover{
     background-color: $secondary-color;
     h2{
-        
         color: $primary-color;   
     }
     p{
         color: $light-color;   
-
     }
 }
 

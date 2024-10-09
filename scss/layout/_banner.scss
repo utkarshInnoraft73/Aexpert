@@ -1,127 +1,91 @@
-@import './../base/variables';
-@import "./../base/typography";
-img{
-    height: auto;
-    width: 100%;
-}
-.banner__content--bcs{
-    position: relative;
-    left: 60px;
-    font-family: Lato_Regular;
-    color: $secondary-color;
+@use "./../importer" as *;
+@use "./../base/mixin" as *;
+.banner__content--bcs {
+    @include sub-texts($secondary-color, Lato_Regular);
+    @include content-position(relative, 0, 60px, 0, 0);
     max-width: 160px;
-
-    &:before{
+    &:before {
         content: "";
-        width: 50px;
-        height: 4px;
-        display: block;
-        position: relative;
-        left: -58px;
-        top: 14px;
+        @include pseudo-elements(block, 4px, 50px);
+        @include content-position(relative, 14px, -58px, 0, 0);
         background-color: $primary-color;
     }
 }
-
-.banner__content--heading{
-    h1{
-
-        font-size: $heading-size;
-        font-family: Bebas_Neue;
-    }
-}
-.banner__content--subtext{
-    color: $gray-color;
+.banner__content--subtext {
     margin: 10px 0;
-    font-family: Lato_Regular;
+    @include sub-texts($gray-color, Lato_Regular);
 }
-.banner__content--button{
+.banner__content--button {
     padding: 15px 0;
-
-    a{
-        text-decoration: none;
-        padding: 15px 22px;
-        background-color: $secondary-color;
-        color: $light-color;
-        border-radius: 25px;
-        font-family: Lato_Regular;
+    a {
+        @include sub-texts($light-color, Lato_Regular);
+        @include button($secondary-color, 22px, 15px, 25px)
     }
 }
-.banner__content--bullet_points{
-    ul{
-        position: relative;
-        left: -30px;
+
+.banner__content--bullet_points {
+    ul {
+        @include content-position(relative, 0, -30px, 0, 0);
         flex-wrap: wrap;
         list-style: none;
-        
-        li{
+        li {
             width: 33%;
-            font-family: Lato_Regular;
-            color: $gray-color;
-            &:before{
+            @include sub-texts($gray-color, Lato_Regular);
+            &:before {
                 content: "";
-                display: block;
-                width: 10px;
-                height: 10px;
+                @include pseudo-elements(block, 10px, 10px);
+                @include content-position(relative, 17px, -55px, 0, 0);
                 border-radius: 50%;
                 background-color: $primary-color;
-                position: relative;
-                left: -55px;
-                top: 17px;
             }
         }
-        li:nth-child(1), li:nth-child(4){
-            position: relative;
-            top: 10px;
-        } 
-        li:nth-child(1)::before, li:nth-child(4)::before{
+        li:nth-child(1),
+        li:nth-child(4) {
+            @include content-position(relative, 10px, 0, 0, 0);
+        }
+        li:nth-child(1)::before,
+        li:nth-child(4)::before {
             width: 0px;
             height: 0px;
-        } 
+        }
     }
 }
-
-
 @media screen and (max-width:992px) {
-    .banner__content--bullet_points{
-        ul{ 
-            li{
-                &::before{
+    .banner__content--bullet_points {
+        ul {
+            li {
+                &::before {
                     left: -15px;
                     width: 7px;
                     height: 7px;
                 }
-            } 
+            }
         }
     }
-    
 }
+
 @media screen and (max-width:576px) {
-    .banner__content--heading{
-        h1{
-            font-size: 50px;
-        }
-    }
-    .banner__content--bullet_points{
-        ul{ 
-            li{
+    .banner__content--bullet_points {
+        ul {
+            li {
                 font-size: 12px;
-                &::before{
-                    left: -15px;
+                &::before {
+                    left: -9px;
                     top: 12px;
                     width: 5px;
                     height: 5px;
                 }
-            } 
-            li:nth-child(1), li:nth-child(4){
-                position: relative;
-                top: 5px;
-            } 
-            li:nth-child(1)::before, li:nth-child(4)::before{
+            }
+            li:nth-child(1),
+            li:nth-child(4) {
+                @include content-position(relative, 5px, 0, 0, 0);
+            }
+            li:nth-child(1)::before,
+            li:nth-child(4)::before {
                 width: 0px;
                 height: 0px;
             }
         }
     }
-    
+
 }
