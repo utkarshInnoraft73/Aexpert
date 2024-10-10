@@ -1,54 +1,53 @@
 @use "./../importer" as *;
 @use "./../base/mixin" as *;
 .footer{
-    @include content-position(relative, 0, 0, 40px, 0);
-}
-.footer__feature--box{
-    max-width: 20%;
-    background-color: $light-color;
-    padding: 15px 20px;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
-    margin: 10px 10px;
-    &:after{
-        content: "";
-        @include pseudo-elements(block, 5px, 100%);
-        background-color: $primary-color;
-        z-index: 22;
-    }
-    h2{
-        font-size: 40px;
-        text-transform: uppercase;
-        font-weight: 400;
-        @include sub-texts($secondary-color, Bebas_Neue);
-        span{
-            display: block;
-        }
-    }
-    p{
-        color: $gray-color;
-        font-family: Lato_Regular;
-        
-    }
-}
-.footer__feature--box:hover{
-    background-color: $secondary-color;
-    h2{
-        color: $primary-color;   
-    }
-    p{
-        color: $light-color;   
+    @include content-position(relative, "", "", 40px, "");
+    @media screen and (max-width:1200px) {
+        bottom: 10px;
     }
 }
 
-@media screen and (max-width:1400px) {
-    .footer__feature--box{
+.footer__feature--box{
+    max-width: 20%;
+    padding: 0 20px;
+    .footer__feature--wrapper{
+        padding: 20px 20px;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+        background-color: $light-color;
         h2{
-            font-size: 30px;
+            font-size: 40px;
+            text-transform: uppercase;
+            font-weight: 400;
+            @include sub-texts($secondary-color, Bebas_Neue);
+            span{
+                display: block;
+            }
+            @media screen and (max-width:1400px) {
+                font-size: 30px;
+            }
+        }
+        p{
+            color: $gray-color;
+            font-family: Lato_Regular;
+            
+        }
+        &:hover{
+            background-color: $secondary-color;
+            h2{
+            color: $primary-color;   
+            }
+            p{
+            color: $light-color;   
+            }
+        }
+        &:after{
+            content: "";
+            @include pseudo-elements(block, 5px, 100%);
+            background-color: $primary-color;
+            z-index: 22;
         }
     }
-}
-@media screen and (max-width:1200px) {
-    .footer{
-        bottom: 10px;
-    }
+    
+    
+   
 }

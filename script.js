@@ -2,7 +2,7 @@ $(document).ready(function(event){
     $('.hamburger').click(function(){
       $('.nav_content__navlinks').show('3000').focus();
     })
-    $('.accountOptions').click(function(){
+    $('.nav_content__account').click(function(){
       $('.nav_content__account_button').show('3000').focus();
     })
     $('.close').click(function(){

@@ -13,7 +13,7 @@
     <title>Axpert</title>
   </head>
   <body>
-    <header>
+    <nav class="nav">
         <!-- Nav container starts here. -->
         <div class="container">
           <div class=" nav_content d-flex justify-content-between">
@@ -26,27 +26,27 @@
               <li class="links px-3"><a href="#">How it works</a></li>
               <li class="links px-3"><a href="#">Blog</a></li>
               <li class="links px-3"><a href="#">About</a></li>
-              <li class="links close"><i class="fa-solid fa-xmark"></i></li>
+              <li class="links nav_content__navlinks--close"><i class="fa-solid fa-xmark"></i></li>
             </ul>
             <!-- Site logo. -->
             <div class="nav_content__logo">
               <a href="#"><img src="./Images/Aexpert.svg" alt="Aexpert image" class="aexpert image-responsive" width="100" height="70"></a>
             </div>
             <!-- Account icons for smaller size screen.-->
-            <a href="#" class="accountOptions" ><i class="fa-solid fa-user"></i></a>
+            <a href="#" class="nav_content__account" ><i class="fa-solid fa-user"></i></a>
             <!-- Account button for signin/signup. -->
             <div class="nav_content__account_button py-3" tabindex="0">
-                <a href="#" class="signin button">Sign in</a>
+              <a href="#" class="signin button">Sign in</a>
               <a href="#" class="signup button">Sign up</a>
-              <button class="closeButton">Close</button>
+              <button class="nav_content__account_button--close">Close</button>
             </div>
           </div>
         </div>
-      </header>
+    </nav>
     <main class="banner">
         <div class="container">
             <div class="banner__content row">
-                <div class="col-lg-6 col-md-12 col-12 bannerText d-flex flex-column justify-content-center">
+                <div class="col-lg-6 col-md-12 col-12 d-flex flex-column justify-content-center">
                     <div class="banner__content--bcs">
                         Business Consultant
                     </div>
@@ -71,29 +71,37 @@
                     </div>
                 </div>
                 <div class="bannerImage col-lg-6 col-md-12 col-12">
-                    <img src="/Images/banner-img.png" alt="Banner image">
+                    <img src="./Images/banner-img.png" alt="Banner image">
                 </div>
             </div>
         </div>
     </main>
-    <footer>
+    <footer class="footer">
         <div class="container">
-            <div class="footer row justify-content-center">
-                <div class="col-lg-2 col-md-5 col-10 footer__feature--box">
-                    <h2>700+<span>employees</span></h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, non!</p>
+            <div class="footer__feature row">
+                <div class="col-lg-3 col-md-6 col-12 footer__feature--box">
+                    <div class="footer__feature--wrapper">
+                        <h2>700+<span>employees</span></h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, non!</p>
+                    </div>
                 </div>
-                <div class="col-lg-2 col-md-5 col-10 footer__feature--box">
-                    <h2>10+<span>years</span></h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, non!</p>
+                <div class="col-lg-3 col-md-6 col-12 footer__feature--box">
+                    <div class="footer__feature--wrapper">
+                        <h2>10+<span>years</span></h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, non!</p>
+                    </div>
                 </div>
-                <div class="col-lg-2 col-md-5 col-10 footer__feature--box">
-                    <h2>12+<span>locations</span></h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, non!</p>
+                <div class="col-lg-3 col-md-6 col-12 footer__feature--box">
+                    <div class="footer__feature--wrapper">
+                        <h2>12+<span>locations</span></h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, non!</p>
+                    </div>
                 </div>
-                <div class="col-lg-2 col-md-5 col-10 footer__feature--box">
-                    <h2>100%<span>satisfactions</span></h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, non!</p>
+                <div class="col-lg-3 col-md-6 col-12 footer__feature--box">
+                    <div  class="footer__feature--wrapper">
+                        <h2>100%<span>satisfactions</span></h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, non!</p>
+                    </div>
                 </div>
             </div>
         </div>

@@ -6,20 +6,26 @@
 }
 
 .hamburger,
-.accountOptions,
-.closeButton,
-.close {
+.nav_content__account,
+.nav_content__account_button--close,
+.nav_content__navlinks--close {
   display: none;
+  @media screen and (max-width:768px) {
+    display: block;
+    color: $secondary-color;
+    font-size: 30px;
+    padding: 12px 0;
+  }
 }
 .links {
   padding: 12px 20px;
   a {
     @include sub-texts($gray-color, Lato_Regular);
-    text-decoration: none;
   }
-}
-a.active_button {
-  color: $primary-color;
+  .active_button {
+    color: $primary-color;
+  } 
+  
 }
 
 .nav_content__account_button {
@@ -30,11 +36,29 @@ a.active_button {
   }
   .signin {
     @include sub-texts($gray-color, Lato_Regular);
-    text-decoration: none;
   }
+  @media screen and (max-width:768px) {
+    .button {
+      display: block;
+      background-color: $secondary-color;
+      border-radius: 20px;
+      color: $light-color;
+      float: left;
+      margin: 5px;
+      padding: 9px 26px;
+    }
+    width: 254px;
+    height: 150px;
+    background-color: rgba(14, 13, 13, 0.8);
+    flex-direction: column;
+    @include content-position(absolute, 54px, "", "", 0px);
+    z-index: 222;
+    display: none;
+  }
+
 }
-@media screen and (max-width:768px) {
-  .nav_content__navlinks {
+.nav_content__navlinks{
+  @media screen and (max-width:768px) {
     background-color: rgba(14, 13, 13, 0.8);
     height: 170px;
     width: 170px;
@@ -43,44 +67,23 @@ a.active_button {
     flex-direction: column;
     z-index: 2;
     li {
-      padding: 8px 0 !important;
+      padding: 8px 0;
       a {
-        color: $light-color !important;
+        color: $light-color;
       }
     }
   }
-  .close {
+}
+.nav_content__navlinks--close{
+  @media screen and (max-width:768px) {
     display: block;
     font-size: 20px;
     color: $light-color;
     @include content-position(absolute, 0px, "", "", 15px);
   }
-  .nav_content__account_button .button {
-    display: block;
-    background-color: $secondary-color;
-    border-radius: 20px;
-    color: $light-color;
-    float: left;
-    margin: 5px;
-    padding: 9px 26px;
-  }
-  .nav_content__account_button {
-    width: 254px;
-    height: 150px;
-    background-color: rgba(14, 13, 13, 0.8);
-    flex-direction: column;
-    @include content-position(absolute, 54px, "", "", 0px);
-    z-index: 222;
-  }
-  .hamburger,
-  .accountOptions,
-  .closeButton {
-    display: block;
-    color: $secondary-color;
-    font-size: 30px;
-    padding: 12px 0;
-  }
-  .closeButton {
+}
+.nav_content__account_button--close{
+  @media screen and (max-width:768px) {
     padding: 3px 17px;
     font-size: 20px;
     color: $light-color;
@@ -88,8 +91,5 @@ a.active_button {
     background-color: $dark-color;
     border-radius: 20px;
     margin: 16px 10px;
-  }
-  .nav_content__account_button {
-    display: none;
   }
 }

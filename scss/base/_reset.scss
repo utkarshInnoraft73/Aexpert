@@ -4,29 +4,32 @@
     padding: 0;
     box-sizing: border-box;
 }
-li {
-    list-style: none;
-}
-a {
-    text-decoration: none;
-    &:hover {
-        color: $primary-color !important;
-    }
-}
-header, main {
+nav, main {
     background-color: $bg-color;
 }
+li {
+    list-style: none;
+    a{
+        text-decoration: none;
+        &:hover {
+            color: $primary-color;
+        }
+    }
+}
+div{
+    a{text-decoration: none;}
+} 
 img{
     height: auto;
     width: 100%;
 }
-h1{
-    font-size: $heading-size !important;
-    font-family: Bebas_Neue !important;
-}
-@media screen and (max-width:576px) {
+body {
     h1{
-        font-size: $subheading-size !important;
-        font-family: Bebas_Neue !important;
+        font-size: $heading-size;
+        font-family: Bebas_Neue;
+        @media screen and (max-width:576px) {font-size: $subheading-size;}
+    }
+    h2{
+        font-family: Bebas_Neue;
     }
 }
