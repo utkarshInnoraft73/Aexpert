@@ -19,7 +19,7 @@
     padding: 15px 0;
     a {
         @include sub-texts($light-color, Lato_Regular);
-        @include button($secondary-color, 22px, 15px, 25px)
+        @include button($secondary-color, 22px, 15px, 25px);
     }
 }
 
@@ -42,32 +42,28 @@
                     width: 7px;
                     height: 7px;
                 }
-            }
-            @media screen and (max-width:576px) {
-                font-size: 12px;
-                &::before {
+                @media screen and (max-width:576px) {
                     left: -9px;
                     top: 12px;
                     width: 5px;
                     height: 5px;
                 }
+                @media screen and (max-width:250px) {
+                        top: 9px;
+                }
             }
-        }
-        li:nth-child(1),
-        li:nth-child(4) {
-            @include content-position(relative, 10px, 0, 0, 0);
-            @media screen and (max-width:576px) {
-                @include content-position(relative, 5px, 0, 0, 0);
-                &::before{
+
+            &:nth-child(1),&:nth-child(4){
+                @include content-position(relative, 10px, 0, 0, 0);
+                &:before{
                     width: 0px;
                     height: 0px;
                 }
+                @media screen and (max-width:576px) {
+                @include content-position(relative, 5px, 0, 0, 0);
+                }
+                
             }
-        }
-        li:nth-child(1)::before,
-        li:nth-child(4)::before {
-            width: 0px;
-            height: 0px;
         }
     }
 }

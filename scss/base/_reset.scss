@@ -1,4 +1,7 @@
 @use "./../importer" as *;
+html{
+    font-size: 16px;
+}
 * {
     margin: 0;
     padding: 0;
@@ -15,6 +18,7 @@ li {
             color: $primary-color;
         }
     }
+    @media screen and (max-width:395px) {font-size: 0.6rem;}
 }
 div{
     a{text-decoration: none;}
@@ -25,11 +29,15 @@ img{
 }
 body {
     h1{
-        font-size: $heading-size;
+        font-size: 6rem;
         font-family: Bebas_Neue;
-        @media screen and (max-width:576px) {font-size: $subheading-size;}
+        @media screen and (max-width:1400px) {font-size: 5rem;}
+        @media screen and (max-width:1200px) {font-size: 4rem;}
+        @media screen and (max-width:395px) {font-size: 3rem;}
     }
     h2{
-        font-family: Bebas_Neue;
+        text-transform: uppercase;
+        font-size: 3rem;
+        @media screen and (max-width:1400px) {font-size: 2rem;}
     }
 }
