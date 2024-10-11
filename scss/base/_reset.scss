@@ -10,10 +10,15 @@ html{
 nav, main {
     background-color: $bg-color;
 }
+ul{
+    padding: 0!important;
+    margin: 0 !important;
+}
 li {
     list-style: none;
     a{
         text-decoration: none;
+        padding: 16px 0px;
         &:hover {
             color: $primary-color;
         }
@@ -37,7 +42,7 @@ body {
     }
     h2{
         text-transform: uppercase;
-        font-size: 3rem;
+        font-size: 2.5rem;
         @media screen and (max-width:1400px) {font-size: 2rem;}
     }
 }
