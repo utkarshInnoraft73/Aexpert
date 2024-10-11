@@ -44,6 +44,9 @@ li a:hover {
 div a {
   text-decoration: none;
 }
+div a:hover {
+  color: #FEBB0C;
+}
 
 img {
   height: auto;

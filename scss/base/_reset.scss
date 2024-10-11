@@ -26,7 +26,11 @@ li {
     @media screen and (max-width:395px) {font-size: 0.6rem;}
 }
 div{
-    a{text-decoration: none;}
+    a{text-decoration: none;
+        &:hover {
+            color: $primary-color;
+        }
+    }
 } 
 img{
     height: auto;
