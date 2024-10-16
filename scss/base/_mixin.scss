@@ -1,27 +1,27 @@
 @use "./../importer" as *;
 
 @mixin sub-texts($color, $font) {
-    color: $color;
-    font-family: $font;
+  color: $color;
+  font-family: $font;
 }
 
 @mixin content-position($position, $top: "", $left: "", $bottom: "", $right: "") {
-    position: $position;
-    top: $top;
-    left: $left;
-    bottom: $bottom;
-    right: $right;
+  position: $position;
+  top: $top;
+  left: $left;
+  bottom: $bottom;
+  right: $right;
 }
 
 @mixin pseudo-elements($display, $height: "", $width: "") {
-    display: $display;
-    height: $height;
-    width: $width;
+  display: $display;
+  height: $height;
+  width: $width;
 }
 
 @mixin button($bg-color, $px, $py, $rounded) {
-    padding: $py $px !important;
-    background-color: $bg-color !important;
-    border-radius: $rounded !important;
-    text-decoration: none !important;
+  padding: $py $px !important;
+  background-color: $bg-color !important;
+  border-radius: $rounded !important;
+  text-decoration: none !important;
 }
