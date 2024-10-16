@@ -1,10 +1,10 @@
 @font-face {
   font-family: Bebas_Neue;
-  src: url(./../fonts/Bebas_Neue/BebasNeue-Regular.ttf);
+  src: url("/fonts/Bebas_Neue/BebasNeue-Regular.ttf");
 }
 @font-face {
   font-family: Lato_Regular;
-  src: url(./../fonts/Lato/Lato-Regular.ttf);
+  src: url("/fonts/Lato/Lato-Regular.ttf");
 }
 html {
   font-size: 16px;
@@ -73,75 +73,22 @@ body h2 {
   }
 }
 
-.nav .container .nav_content .nav_content__logo {
+.nav_content__logo {
   margin: auto;
 }
-.nav .container .nav_content .hamburger,
-.nav .container .nav_content .nav_content__account,
-.nav .container .nav_content .nav_content__account_button--close,
-.nav .container .nav_content .nav_content__navlinks--close {
+.nav_content .hamburger, .nav_content__account, .nav_content__account_button--close, .nav_content__navlinks--close {
   display: none;
 }
 @media screen and (max-width: 768px) {
-  .nav .container .nav_content .hamburger,
-  .nav .container .nav_content .nav_content__account,
-  .nav .container .nav_content .nav_content__account_button--close,
-  .nav .container .nav_content .nav_content__navlinks--close {
+  .nav_content .hamburger, .nav_content__account, .nav_content__account_button--close, .nav_content__navlinks--close {
     display: block;
     color: #007A82;
     font-size: 2rem;
     padding: 1rem 0;
   }
 }
-.nav .container .nav_content .links {
-  padding: 1rem 0px;
-}
-.nav .container .nav_content .links a {
-  color: #666666;
-  font-family: Lato_Regular;
-}
-.nav .container .nav_content .links .active_button {
-  color: #FEBB0C;
-}
-.nav .container .nav_content .nav_content__account_button .signup {
-  padding: 0.8rem 1.4rem !important;
-  background-color: #007A82 !important;
-  border-radius: 1.4rem !important;
-  text-decoration: none !important;
-  color: #FFFFFF;
-  font-family: Lato_Regular;
-  margin-left: 0.8rem;
-}
-.nav .container .nav_content .nav_content__account_button .signin {
-  color: #666666;
-  font-family: Lato_Regular;
-}
 @media screen and (max-width: 768px) {
-  .nav .container .nav_content .nav_content__account_button {
-    width: 254px;
-    height: 150px;
-    background-color: rgba(14, 13, 13, 0.8);
-    flex-direction: column;
-    position: absolute;
-    top: 3.2rem;
-    left: "";
-    bottom: "";
-    right: 0px;
-    z-index: 222;
-    display: none;
-  }
-  .nav .container .nav_content .nav_content__account_button .button {
-    display: block;
-    background-color: #007A82;
-    border-radius: 1.4rem;
-    color: #FFFFFF;
-    float: left;
-    margin: 0.3rem;
-    padding: 0.75rem 1.8rem;
-  }
-}
-@media screen and (max-width: 768px) {
-  .nav .container .nav_content .nav_content__navlinks {
+  .nav_content__navlinks {
     background-color: rgba(14, 13, 13, 0.8);
     height: 170px;
     width: 170px;
@@ -154,15 +101,29 @@ body h2 {
     flex-direction: column;
     z-index: 2;
   }
-  .nav .container .nav_content .nav_content__navlinks li {
+}
+.nav_content__navlinks .links {
+  padding: 1rem 0px;
+}
+@media screen and (max-width: 768px) {
+  .nav_content__navlinks .links {
     padding: 8px 0;
   }
-  .nav .container .nav_content .nav_content__navlinks li a {
+}
+.nav_content__navlinks .links a {
+  color: #666666;
+  font-family: Lato_Regular;
+}
+@media screen and (max-width: 768px) {
+  .nav_content__navlinks .links a {
     color: #FFFFFF;
   }
 }
+.nav_content__navlinks .links .active_button {
+  color: #FEBB0C;
+}
 @media screen and (max-width: 768px) {
-  .nav .container .nav_content .nav_content__navlinks--close {
+  .nav_content__navlinks--close {
     display: block;
     font-size: 1.4rem;
     color: #FFFFFF;
@@ -173,8 +134,45 @@ body h2 {
     right: 1rem;
   }
 }
+.nav_content__account_button .signup {
+  padding: 0.8rem 1.4rem !important;
+  background-color: #007A82 !important;
+  border-radius: 1.4rem !important;
+  text-decoration: none !important;
+  color: #FFFFFF;
+  font-family: Lato_Regular;
+  margin-left: 0.8rem;
+}
+.nav_content__account_button .signin {
+  color: #666666;
+  font-family: Lato_Regular;
+}
 @media screen and (max-width: 768px) {
-  .nav .container .nav_content .nav_content__account_button--close {
+  .nav_content__account_button {
+    width: 254px;
+    height: 150px;
+    background-color: rgba(14, 13, 13, 0.8);
+    flex-direction: column;
+    position: absolute;
+    top: 3.2rem;
+    left: "";
+    bottom: "";
+    right: 0px;
+    z-index: 222;
+    display: none;
+  }
+  .nav_content__account_button .button {
+    display: block;
+    background-color: #007A82;
+    border-radius: 1.4rem;
+    color: #FFFFFF;
+    float: left;
+    margin: 0.3rem;
+    padding: 0.75rem 1.8rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .nav_content__account_button--close {
     padding: 0.1rem 1rem;
     font-size: 1.4rem;
     color: #FFFFFF;
@@ -185,7 +183,7 @@ body h2 {
   }
 }
 
-.banner .banner__content div .banner__content--bcs {
+.banner__content--bcs {
   color: #007A82;
   font-family: Lato_Regular;
   position: relative;
@@ -195,7 +193,7 @@ body h2 {
   right: 0;
   max-width: 160px;
 }
-.banner .banner__content div .banner__content--bcs:before {
+.banner__content--bcs:before {
   content: "";
   display: block;
   height: 0.3rem;
@@ -207,15 +205,15 @@ body h2 {
   right: 0;
   background-color: #FEBB0C;
 }
-.banner .banner__content div .banner__content--subtext {
+.banner__content--subtext {
   margin: 0.8rem 0;
   color: #666666;
   font-family: Lato_Regular;
 }
-.banner .banner__content div .banner__content--button {
+.banner__content--button {
   padding: 1rem 0;
 }
-.banner .banner__content div .banner__content--button a {
+.banner__content--button a {
   color: #FFFFFF;
   font-family: Lato_Regular;
   padding: 15px 22px !important;
@@ -223,36 +221,36 @@ body h2 {
   border-radius: 25px !important;
   text-decoration: none !important;
 }
-.banner .banner__content div .banner__content--bullet_points ul {
+.banner__content--bullet_points ul {
   flex-wrap: wrap;
   max-width: 90%;
 }
 @media screen and (max-width: 992px) {
-  .banner .banner__content div .banner__content--bullet_points ul {
+  .banner__content--bullet_points ul {
     max-width: 70%;
   }
 }
 @media screen and (max-width: 576px) {
-  .banner .banner__content div .banner__content--bullet_points ul {
+  .banner__content--bullet_points ul {
     max-width: 95%;
   }
 }
 @media screen and (max-width: 395px) {
-  .banner .banner__content div .banner__content--bullet_points ul {
+  .banner__content--bullet_points ul {
     max-width: 100%;
   }
 }
-.banner .banner__content div .banner__content--bullet_points ul li {
+.banner__content--bullet_points ul li {
   width: 33%;
   color: #666666;
   font-family: Lato_Regular;
 }
 @media screen and (max-width: 395px) {
-  .banner .banner__content div .banner__content--bullet_points ul li {
+  .banner__content--bullet_points ul li {
     font-size: 0.8rem;
   }
 }
-.banner .banner__content div .banner__content--bullet_points ul li:before {
+.banner__content--bullet_points ul li:before {
   content: "";
   display: block;
   height: 0.6rem;
@@ -266,42 +264,42 @@ body h2 {
   background-color: #FEBB0C;
 }
 @media screen and (max-width: 1200px) {
-  .banner .banner__content div .banner__content--bullet_points ul li:before {
+  .banner__content--bullet_points ul li:before {
     left: -1.5rem;
     width: 7px;
     height: 7px;
   }
 }
 @media screen and (max-width: 576px) {
-  .banner .banner__content div .banner__content--bullet_points ul li:before {
+  .banner__content--bullet_points ul li:before {
     left: -2rem;
     top: 16px;
   }
 }
 @media screen and (max-width: 395px) {
-  .banner .banner__content div .banner__content--bullet_points ul li:before {
+  .banner__content--bullet_points ul li:before {
     left: -1rem;
     top: 15px;
   }
 }
 @media screen and (max-width: 250px) {
-  .banner .banner__content div .banner__content--bullet_points ul li:before {
+  .banner__content--bullet_points ul li:before {
     top: 9px;
   }
 }
-.banner .banner__content div .banner__content--bullet_points ul li:nth-child(1), .banner .banner__content div .banner__content--bullet_points ul li:nth-child(4) {
+.banner__content--bullet_points ul li:nth-child(1), .banner__content--bullet_points ul li:nth-child(4) {
   position: relative;
   top: 10px;
   left: 0;
   bottom: 0;
   right: 0;
 }
-.banner .banner__content div .banner__content--bullet_points ul li:nth-child(1):before, .banner .banner__content div .banner__content--bullet_points ul li:nth-child(4):before {
+.banner__content--bullet_points ul li:nth-child(1):before, .banner__content--bullet_points ul li:nth-child(4):before {
   width: 0px;
   height: 0px;
 }
 @media screen and (max-width: 576px) {
-  .banner .banner__content div .banner__content--bullet_points ul li:nth-child(1), .banner .banner__content div .banner__content--bullet_points ul li:nth-child(4) {
+  .banner__content--bullet_points ul li:nth-child(1), .banner__content--bullet_points ul li:nth-child(4) {
     position: relative;
     top: 5px;
     left: 0;
@@ -309,7 +307,7 @@ body h2 {
     right: 0;
   }
 }
-.banner .banner__content .banner__content--img img {
+.banner__content--img img {
   width: 100%;
   height: auto;
 }
@@ -326,47 +324,47 @@ body h2 {
     bottom: 10px;
   }
 }
-.footer .container .footer__feature {
+.footer_feature {
   max-width: 1100px;
 }
 @media screen and (max-width: 1400px) {
-  .footer .container .footer__feature {
+  .footer_feature {
     max-width: 950px;
   }
 }
-.footer .container .footer__feature .footer__feature--box {
+.footer_feature__box {
   padding: 0 20px;
 }
-.footer .container .footer__feature .footer__feature--box .footer__feature--wrapper {
+.footer_feature__box--wrapper {
   padding: 20px 20px;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
   background-color: #FFFFFF;
 }
-.footer .container .footer__feature .footer__feature--box .footer__feature--wrapper h2 {
+.footer_feature__box--wrapper h2 {
   color: #007A82;
   font-family: Bebas_Neue;
 }
-.footer .container .footer__feature .footer__feature--box .footer__feature--wrapper h2 span {
+.footer_feature__box--wrapper h2 span {
   display: block;
 }
-.footer .container .footer__feature .footer__feature--box .footer__feature--wrapper p {
+.footer_feature__box--wrapper p {
   color: #666666;
   font-family: Lato_Regular;
 }
-.footer .container .footer__feature .footer__feature--box .footer__feature--wrapper:hover {
+.footer_feature__box--wrapper:hover {
   background-color: #007A82;
 }
-.footer .container .footer__feature .footer__feature--box .footer__feature--wrapper:hover h2 {
+.footer_feature__box--wrapper:hover h2 {
   color: #FEBB0C;
 }
-.footer .container .footer__feature .footer__feature--box .footer__feature--wrapper:hover p {
+.footer_feature__box--wrapper:hover p {
   color: #FFFFFF;
 }
-.footer .container .footer__feature .footer__feature--box .footer__feature--wrapper:after {
+.footer_feature__box--wrapper:after {
   content: "";
   display: block;
   height: 5px;
   width: 100%;
   background-color: #FEBB0C;
   z-index: 22;
-}/*# sourceMappingURL=style.css.map */
+}
