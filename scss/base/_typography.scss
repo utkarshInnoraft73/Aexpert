@@ -1,0 +1,16 @@
+// Fonts on the site.
+@font-face {
+  font-family: Bebas_Neue;
+  src: url("./../../fonts/Bebas_Neue/BebasNeue-Regular.ttf");
+}
+
+@font-face {
+  font-family: Lato_Regular;
+  src: url("./../../fonts/Lato/Lato-Regular.ttf");
+}
+
+// Font sizes variables.
+
+$heading-size: 90px;
+$subheading-size: 40px;
+$text-size: 20px;

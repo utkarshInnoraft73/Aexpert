@@ -1,0 +1,111 @@
+@use "./../importer" as *;
+@use "./../base/mixin" as *;
+
+.banner {
+  &__content {
+    &--bcs {
+      @include sub-texts($secondary-color, Lato_Regular);
+      @include content-position(relative, 0, 3.9rem, 0, 0);
+      max-width: 160px;
+
+      &:before {
+        content: "";
+        @include pseudo-elements(block, 0.3rem, 3.5rem);
+        @include content-position(relative, 0.9rem, -3.8rem, 0, 0);
+        background-color: $primary-color;
+      }
+    }
+
+    &--subtext {
+      margin: 0.8rem 0;
+      @include sub-texts($gray-color, Lato_Regular);
+    }
+
+    &--button {
+      padding: 1rem 0;
+
+      a {
+        @include sub-texts($light-color, Lato_Regular);
+        @include button($secondary-color, 22px, 15px, 25px);
+      }
+    }
+
+    &--bullet_points {
+      ul {
+        flex-wrap: wrap;
+        max-width: 90%;
+
+        @media screen and (max-width:992px) {
+          max-width: 70%;
+        }
+
+        @media screen and (max-width:576px) {
+          max-width: 95%;
+        }
+
+        @media screen and (max-width:395px) {
+          max-width: 100%;
+        }
+
+        li {
+          width: 33%;
+          @include sub-texts($gray-color, Lato_Regular);
+
+          @media screen and (max-width:395px) {
+            font-size: 0.8rem;
+          }
+
+          &:before {
+            content: "";
+            @include pseudo-elements(block, 0.6rem, 0.6rem);
+            @include content-position(relative, 1rem, -55px, 0, 0);
+            border-radius: 50%;
+            background-color: $primary-color;
+
+            @media screen and (max-width:1200px) {
+              left: -1.5rem;
+              width: 7px;
+              height: 7px;
+            }
+
+            @media screen and (max-width:576px) {
+              left: -2rem;
+              top: 16px;
+            }
+
+            @media screen and (max-width:395px) {
+              left: -1rem;
+              top: 15px;
+            }
+
+            @media screen and (max-width:250px) {
+              top: 9px;
+            }
+          }
+
+          &:nth-child(1),
+          &:nth-child(4) {
+            @include content-position(relative, 10px, 0, 0, 0);
+
+            &:before {
+              width: 0px;
+              height: 0px;
+            }
+
+            @media screen and (max-width:576px) {
+              @include content-position(relative, 5px, 0, 0, 0);
+            }
+          }
+        }
+      }
+    }
+
+    &--img {
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+
+}
